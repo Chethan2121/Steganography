@@ -1,0 +1,142 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 90%;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+h1, h3, p {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+/* Label Styling */
+.input-label {
+    color: #00ff00; /* Green text color */
+    font-weight: bold; /* Make label bold */
+    margin-bottom: 5px; /* Space between label and input */
+    display: block; /* Make label a block element for proper spacing */
+}
+
+/* Input Field Styling */
+input[type="text"], input[type="file"], textarea {
+    background-color: #003300; /* Dark green background */
+    color: #00ff00; /* Green text color */
+    border: 2px solid #00ff00; /* Green border */
+    padding: 10px; /* Padding for the input */
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 24px); /* Full width minus padding */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #00ff00; /* Button background color */
+    color: #000; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #007300; /* Darker green on hover */
+}
+
+/* Textarea Styling */
+textarea {
+    background-color: #003300; /* Dark green background */
+    color: #00ff00; /* Green text color */
+    border: 2px solid #00ff00; /* Green border */
+    padding: 10px; /* Padding for the textarea */
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 24px); /* Full width minus padding */
+    margin: 10px 0; /* Margin for spacing */
+    resize: none; /* Disable resizing */
+    height: 100px; /* Fixed height */
+}
+
+/* Text Animation for Main Page */
+.static {
+    display: inline;
+    color: #00ff00;
+}
+
+.animated-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal 0.5s ease forwards; /* Default animation duration */
+    opacity: 0; /* Start with hidden opacity */
+}
+
+.animated-text:nth-child(1) { animation-delay: 0.5s; }
+.animated-text:nth-child(2) { animation-delay: 1s; }
+.animated-text:nth-child(3) { animation-delay: 1.5s; }
+.animated-text:nth-child(4) { animation-delay: 2s; }
+
+@keyframes reveal {
+    0% {
+        opacity: 0; /* Invisible at start */
+        transform: translateY(20px); /* Slide in effect */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Button Styling */
+button, .button {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover, .button:hover {
+    background-color: #007300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], input[type="file"], textarea, button, .button {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+.container img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 10px; /* Optional: Match the border radius of the container */
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt Message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encrypt Message in Image</h1>
+        <input type="file" id="imageInput" accept="image/*"><br><br>
+        <textarea id="messageInput" placeholder="Enter secret message"></textarea><br><br>
+        <button onclick="encryptMessage()">Encrypt Message</button>
+        <h3>Encrypted Image:</h3>
+        <img id="encryptedImage" alt="Your encrypted image will appear here."><br><br>
+        <button onclick="downloadEncryptedImage()">Download Encrypted Image</button><br><br>
+        <a href="index.html" class="button">Back to Main</a>
+    </div>
+
+    <script src="steganography.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

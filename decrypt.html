@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrypt Message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Decrypt Message from Image</h1>
+        <input type="file" id="encryptedImageInput" accept="image/*"><br><br>
+        <button onclick="decryptMessage()">Decrypt Message</button>
+        <br><br>
+        <p id="decryptedMessage">Hidden message will appear here.</p>
+        <br>
+        <a href="index.html" class="button">Back to Main</a>
+    </div>
+
+    <script src="steganography.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
